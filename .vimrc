@@ -1,2 +1,9 @@
+set nocompatible
+set t_Co=256
 syntax on
 set number
+set laststatus=2
+set nohlsearch
+set incsearch
+set ignorecase
+set ruler
