@@ -1,6 +1,6 @@
 set nocompatible
 set t_Co=256
-syntax on
+syntax off
 set number
 set laststatus=2
 set nohlsearch
