@@ -34,6 +34,7 @@ fi
 #######################################################################################
 #
 #     install Python3
+
 which python3 > /dev/null
 if [[ $? != 0 ]]; then
 	echo_warn 'Installing "Python3" ...'
@@ -45,6 +46,19 @@ if [[ $? != 0 ]]; then
 	brew linkapps python3
 else
 	echo_ok '"Python3" already installed'
+fi
+
+#######################################################################################
+#
+#     install Sublime Text 3
+
+test -f /usr/local/bin/subl
+if [[ $? != 0 ]]; then
+	echo_warn 'Installing "Sublime Text 3" ...'
+	brew install Caskroom/cask/sublime-text
+	ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/subl
+else
+	echo_ok '"Sublime Text 3" already installed'
 fi
 
 #######################################################################################
