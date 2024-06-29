@@ -30,7 +30,7 @@
         "exec": "swaymsg -mrt subscribe '[\"input\"]' | jq -r --unbuffered \"select(.change == \\\"xkb_layout\\\") | .input | select(.type == \\\"keyboard\\\") | .xkb_active_layout_name | .[0:2]\""
     },
     "custom/zypper": {
-        "format": "{} ",
+        "format": "{}  ",
         "interval": 3600,
         "exec": "zypper lu | grep 'v |' | wc -l; echo 'packages to update'",
         "exec-if": "exit 0",
@@ -66,7 +66,7 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        "format": " {:%d.%m.%Y %R}",
+        "format": "   {:%d.%m.%Y %R}",
         "format-alt": "{:%a %d. %b Woche: %V}",
         "tooltip-format": "<span color='#35b9ab'><tt><small>{calendar}</small></tt></span>",
         "calendar": {
