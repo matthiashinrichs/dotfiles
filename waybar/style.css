@@ -16,7 +16,7 @@ window#waybar {
 }
 
 window#waybar.solo {
-    color: rgba(53, 185, 171, 1);
+    color: rgb(166, 173, 200);
 }
 
 #workspaces {
@@ -34,15 +34,20 @@ window#waybar.solo {
 
 #workspaces button {
     padding: 0 15px;
-    color: rgba(53, 185, 171, 1);
+    color: rgb(166, 173, 200);
+}
+
+#workspaces button:hover {
+    background: none;
+    color: rgb(203, 166, 247);
 }
 
 #workspaces button.focused {
-    color: rgba(115, 186, 37, 1);
+    color: rgb(137, 180, 250);
 }
 
 #workspaces button.visible {
-    color: rgba(115, 186, 37, 1);
+    color: rgb(137, 180, 250);
 }
 
 #workspaces button.urgent {
@@ -98,5 +103,5 @@ window#waybar.solo {
 }
 
 #bluetooth.connected {
-    color: rgba(115, 186, 37, 1);
+    color: rgb(137, 180, 250);
 }
