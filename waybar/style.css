@@ -1,14 +1,12 @@
 * {
     border:        none;
     border-radius: 0;
-    font-family:   "MesloLGL Nerd Font Bold";
+    font-family:   "MesloLGSDZ Nerd Font";
     font-weight:   bold;
     font-size:     15px;
     box-shadow:    none;
     text-shadow:   none;
     transition-duration: 0s;
-
-
 }
 
 window#waybar {
@@ -83,7 +81,6 @@ window#waybar.solo {
 
 
 #clock {
-    margin: 0px 6px 0px 10px;
     background-color: rgb(139, 213, 202);
 }
 
@@ -98,18 +95,6 @@ window#waybar.solo {
 
 #battery.critical {
     color: rgba(238, 46, 36, 1);
-}
-
-#battery.charging {
-    color: rgba(217, 216, 216, 1);
-}
-
-#bluetooth.disabled {
-    color: rgba(128, 128, 128, 1);
-}
-
-#bluetooth.off {
-    color: rgba(128, 128, 128, 1);
 }
 
 #bluetooth.connected {
