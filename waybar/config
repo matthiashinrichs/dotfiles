@@ -5,23 +5,32 @@
     // "width": 1280, // Waybar width
     // "gtk-layer-shell": "false",
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "custom/scratchpad", "sway/mode", "tray"],
-    "modules-center": ["sway/window"],
-    "modules-right": ["custom/zypper", "network", "bluetooth", "cpu", "memory", "temperature", "backlight", "battery", "battery#bat2", "pulseaudio", "custom/layout", "clock", "custom/notification"],
-    "sway/mode": {
-        "format": " {}"
+    "modules-left": ["custom/apps", "hyprland/workspaces", "custom/scratchpad", "hyprland/submap", "tray"],
+    "modules-center": ["hyprland/window"],
+    "modules-right": ["custom/zypper", "network", "bluetooth", "cpu", "memory", "battery", "battery#bat2", "pulseaudio", "custom/layout", "clock", "custom/notification"],
+
+    "hyprland/submap": {
+    "format": "✌️ {}",
+    "max-length": 8,
+    "tooltip": false
+},
+    "custom/apps": {
+      "tooltip": false,
+      "on-click": "exec wofi --show drun",
+      "format-icons": "",
+      "format": "{icon}",
     },
-    "sway/workspaces": {
-        "all-outputs": false,
-        "disable-scroll": true,
-        "format": "{index} {icon}",
-        "format-icons": {
-            "urgent": "",
-            "focused": "",
-            "default": ""
-        }
-    },
-    "sway/window": {
+    //"sway/workspaces": {
+    //    "all-outputs": false,
+    //    "disable-scroll": true,
+    //    "format": "{index} {icon}",
+    //    "format-icons": {
+    //        "urgent": "",
+    //        "focused": "",
+    //        "default": ""
+    //    }
+    //},
+    "hyprland/window": {
         "max-length": 80,
         "tooltip": false
     },
@@ -38,21 +47,27 @@
         "signal": 8
     },
     // Modules configuration
-    //  "sway/workspaces": {
-    //     "disable-scroll": true,
-    //     "all-outputs": true,
-    //     "format": "{name}: {icon}",
-    //     "format-icons": {
-    //         "1": "",
-    //         "2": "",
-    //         "3": "",
-    //         "4": "",
-    //         "5": "",
-    //         "urgent": "",
-    //         "focused": "",
-    //         "default": ""
-    //     }
-    // },
+      "hyprland/workspaces": {
+         "disable-scroll": true,
+         "all-outputs": true,
+         "format": "{name}: {icon}",
+	 "persistent-workspaces": {
+	   "2":[],
+	   "3":[],
+	   "4":[],
+	   "5":[]
+	 },
+         "format-icons": {
+             "1": "",
+             "2": "",
+             "3": "",
+             "4": "",
+             "5": "",
+             "urgent": "",
+             "focused": "",
+             "default": ""
+         }
+     },
     "idle_inhibitor": {
         "format": "{icon}",
         "format-icons": {
@@ -148,7 +163,7 @@
 	"on-click-right": "exec alacritty -e sh -c 'bluetoothctl'"
     },
     "pulseaudio": {
-        "format": "{icon}",
+        "format": "{volume}% {icon}",
         "format-alt": "{volume} {icon}",
         "format-alt-click": "click-right",
         "format-muted": "",
@@ -166,6 +181,12 @@
         "on-click-right": "pavucontrol",
         "tooltip": false
     },
+    "wireplumber": {
+    "format": "{volume}% {icon}",
+    "format-muted": "",
+    "on-click": "helvum",
+    "format-icons": ["", "", ""]
+},
     "custom/scratchpad": {
         "format-text": "{}",
         "return-type": "json",

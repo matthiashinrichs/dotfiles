@@ -2,14 +2,17 @@
     border:        none;
     border-radius: 0;
     font-family:   "MesloLGL Nerd Font Bold";
-    font-size:     13px;
+    font-weight:   bold;
+    font-size:     15px;
     box-shadow:    none;
     text-shadow:   none;
     transition-duration: 0s;
+
+
 }
 
 window#waybar {
-    color: rgba(255, 255, 255, 0.6);
+    color: rgb(202, 211, 245);
     background-color: rgba(0, 0, 0, 0.4);
     border-bottom: 0px solid rgba(53, 185, 171, 0.4);
 }
@@ -19,8 +22,12 @@ window#waybar.solo {
 }
 
 #workspaces {
-    margin: 0 5px;
+    margin: 0 0.5em;
+    padding: 0 0.5em;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 1em;
 }
+
 
 #custom-scratchpad {
     margin: 0px	5px;
@@ -28,7 +35,7 @@ window#waybar.solo {
 }
 
 #workspaces button {
-    padding: 0 5px;
+    padding: 0 15px;
     color: rgba(53, 185, 171, 1);
 }
 
@@ -44,7 +51,7 @@ window#waybar.solo {
     color: rgba(33, 164, 223, 1);
 }
 
-#mode, 
+#submap, 
 #battery, 
 #cpu, 
 #memory, 
@@ -54,13 +61,35 @@ window#waybar.solo {
 #idle_inhibitor, 
 #temperature,
 #custom-layout,
-#backlight {
-    margin: 0px 6px 0px 10px;
-/*    min-width: 30px;*/
+#custom-apps,
+#custom-zypper,
+#backlight,
+#clock,
+#custom-notification {
+    margin: 0px 5px 0px 5px;
+    padding: 0px 1em 0px 1em;
+    border: 1px solid rgba(255,255,255,0.4);
+    border-radius: 1em;
+    min-width: 30px;
+    background-color: #cba6f7;
+    color: rgb(17, 17, 27);
 }
+
+#custom-apps,
+#custom-zypper{
+    background-color: rgb(166, 218, 149);
+    padding: 0 0.8em 0 0.5em;
+}
+
 
 #clock {
     margin: 0px 6px 0px 10px;
+    background-color: rgb(139, 213, 202);
+}
+
+#network,
+#bluetooth{
+    background-color: rgb(138, 173, 244);
 }
 
 #battery.warning {
