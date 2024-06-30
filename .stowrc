@@ -1,3 +1,5 @@
---target=~/.config
+--target=~/
 --ignore=.stowrc
+--ignore=install_opensuse.sh
 --ignore=DS_Store
+--dotfiles
