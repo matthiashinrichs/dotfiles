@@ -30,7 +30,9 @@ vim.g.maplocalleader = "\\"
 -- Setup lazy.nvim
 require("lazy").setup(plugins, opts)
 
-require("catppuccin").setup()
+require("catppuccin").setup({
+  transparent_background = true,
+})
 vim.cmd.colorscheme "catppuccin-mocha"
 
 local builtin = require('telescope.builtin')
