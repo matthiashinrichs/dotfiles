@@ -1,6 +1,6 @@
 # This script installs the required files to run hyprland on openSuse Tumbleweed
 
-PACKAGES="git kitty zsh hyprland hyprcursor hyprpaper hypridle xdg-desktop-portal-hyprland dunst swaybar ripgrep"
+PACKAGES="git kitty zsh hyprland hyprcursor hyprpaper hypridle xdg-desktop-portal-hyprland dunst swaybar ripgrep wlogout"
 
 
 # Install packages

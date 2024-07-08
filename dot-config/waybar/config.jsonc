@@ -6,28 +6,28 @@
     // "gtk-layer-shell": "false",
     // Choose the order of the modules
     "modules-left": [
-        "custom/apps", 
-	"hyprland/workspaces",
-	"custom/scratchpad", 
-	"sway/mode", 
-	"tray"
+        "clock", 
+        //"custom/apps", 
+        "hyprland/workspaces",
+        "custom/scratchpad", 
+        "sway/mode",
+        "tray"
     ],
     "modules-center": [
         "hyprland/window"
     ],
     "modules-right": [
+        "bluetooth", 
         "custom/zypper", 
-	"network", 
-	"bluetooth", 
-	"cpu", 
-	"memory", 
-	//"temperature", 
-	"backlight", 
-	"battery", 
-	"battery#bat2", 
-	"pulseaudio", 
-	"clock", 
-	"custom/notification"
+        "network", 
+        "cpu", 
+        "memory", 
+        //"temperature", 
+        "backlight", 
+        "pulseaudio", 
+        "battery", 
+        "battery#bat2" 
+        //"custom/notification"
     ],
     "sway/mode": {
         "format": " {}"
@@ -52,7 +52,7 @@
         "tooltip": false
     },
     "custom/zypper": {
-        "format": "{}  ",
+        "format": "  {}",
         "interval": 3600,
         "exec": "zypper lu | grep 'v |' | wc -l; echo 'packages to update'",
         "exec-if": "exit 0",
@@ -94,7 +94,7 @@
     },
     "clock": {
         // "timezone": "America/New_York",
-        "format": "{:%R} ",
+        "format": "󱑍  {:%R   %d.%m.}",
         "format-alt": "{:%a %d. %b Woche: %V}",
         "tooltip-format": "<span color='#35b9ab'><tt><small>{calendar}</small></tt></span>",
         "calendar": {
@@ -117,11 +117,11 @@
         "interval": 10
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": "  {usage}%",
         "tooltip": false
     },
     "memory": {
-        "format": "{}% "
+        "format": "  {}%"
     },
     "temperature": {
         // "thermal-zone": 2,
@@ -133,8 +133,8 @@
     },
     "backlight": {
         // "device": "acpi_video1",
-        "format": "{percent} {icon}",
-        "format-icons": ["󰳲"]
+        "format": "{icon} {percent}%" ,
+        "format-icons": ["󰃠 "]
     },
     "battery": {
         "states": {
@@ -142,7 +142,7 @@
             "warning": 20,
             "critical": 10
         },
-        "format": "{icon}",
+        "format": "{icon} {capacity}%",
         "format-charging": "",
         "format-plugged": "",
         "format-alt": "{capacity}% {time}",
@@ -153,9 +153,9 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "",
-        "format-ethernet": "",
-        "format-linked": "",
+        "format-wifi": "  {essid}",
+        "format-ethernet": " ",
+        "format-linked": " ",
         "format-disconnected": "⚠",
         "format-alt": "{ifname} {essid} ({signalStrength}%)"
     },
@@ -176,18 +176,18 @@
 	"on-click-right": "exec alacritty -e sh -c 'bluetoothctl'"
     },
     "pulseaudio": {
-        "format": "{icon}",
+        "format": "{icon} {volume}%",
         "format-alt": "{volume} {icon}",
         "format-alt-click": "click-right",
-        "format-muted": "",
+        "format-muted": " ",
         "format-icons": {
-            "headphones": "",
-            "handsfree": "",
-            "headset": "",
-            "phone": "",
-            "portable": "",
-            "car": "",
-            "default": ["", "", ""]
+            "headphones": " ",
+            "handsfree": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": [" ", " ", " "]
         },
         "scroll-step": 10,
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
@@ -199,7 +199,7 @@
     "format": "{volume}% {icon}",
     "format-muted": "",
     "on-click": "helvum",
-    "format-icons": ["", "", ""]
+    "format-icons": [" ", " ", " "]
 },
     "custom/scratchpad": {
         "format-text": "{}",
