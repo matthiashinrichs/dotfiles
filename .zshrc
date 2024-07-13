@@ -105,6 +105,7 @@ source $ZSH/oh-my-zsh.sh
 
 alias vi=nvim
 alias icat="kitten icat"
+alias code="code --ozone-platform=wayland "
 
 [[ -s "/home/matthias/.gvm/scripts/gvm" ]] && source "/home/matthias/.gvm/scripts/gvm"
 
@@ -113,3 +114,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 [ "$TERM" = "xterm-256color" ] && alias ssh="kitty +kitten ssh"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/home/matthias/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)

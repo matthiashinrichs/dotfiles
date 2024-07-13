@@ -143,7 +143,7 @@
             "critical": 10
         },
         "format": "{icon} {capacity}%",
-        "format-charging": "",
+        "format-charging": " {capacity}%",
         "format-plugged": "",
         "format-alt": "{capacity}% {time}",
         "format-icons": ["", "", "", "", ""]
