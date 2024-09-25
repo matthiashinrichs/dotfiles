@@ -118,3 +118,4 @@ export NVM_DIR="$HOME/.nvm"
 ### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
 export PATH="/home/matthias/.rd/bin:$PATH"
 ### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+fastfetch --colors-symbol circle

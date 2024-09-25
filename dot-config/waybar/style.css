@@ -38,14 +38,13 @@ tooltip {
 
 #workspaces button.urgent {
     color: #11111b;
-    background: #a6e3a1;
-    border-radius: 10px;
 }
 
 #workspaces button:hover {
-    background: #11111b;
     color: #cdd6f4;
-    border-radius: 10px;
+    border: 0px;
+    background: rgba(21, 18, 27, 0);
+    border-color: #11111b;
 }
 
 #bluetooth,
@@ -71,6 +70,7 @@ tooltip {
 #tray {
     border-radius: 10px;
     margin-right: 10px;
+    margin-left: 10px;
 }
 
 #workspaces {
@@ -137,5 +137,5 @@ tooltip {
     border-right: 0px;
 }
 #bluetooth {
-  border-radius: 10px;
+    border-radius: 10px 0 0 10px;
 }

@@ -1,0 +1,38 @@
+---
+- name: Setup local machine
+  hosts: localhost
+  connection: local
+  become: true
+
+  tasks:
+    - name: Ensure my basic packages are installed
+      ansible.builtin.dnf:
+        name:
+          - git-core
+          - wireguard-tools
+          - neovim
+          - btop
+          - htop
+          - zsh
+          - stow
+          - fastfetch
+        state: latest
+
+    - name: Copy gitconfig
+      ansible.builtin.template:
+        src: files/.gitconfig.j2
+        dest: /home/matthias/gitconfig-new
+        owner: matthias
+        group: matthias
+
+    - name: Ensure packages for hyprland are installed
+      ansible.builtin.dnf:
+        name:
+          - hyprland
+          - hypridle
+          - hyprlock
+          - hyprutils
+          - xdg-desktop-portal-hyprland
+          - kitty
+          - wofi
+        state: latest
